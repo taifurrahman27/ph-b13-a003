@@ -2,9 +2,14 @@ function finalScore(omr) {
     if (typeof omr !== 'object') {
         return 'Invalid';
     }
+
+    // const {right:rightAnswer, wrong:wrongAnwer, skip:skippedAnswer} = omr
+
+
     const rightAnswer = omr.right;
     const wrongAnwer = omr.wrong;
     const skippedAnswer = omr.skip;
+
     if (typeof rightAnswer !== 'number' || typeof wrongAnwer !== 'number' || typeof skippedAnswer !== 'number') {
         return 'Invalid';
     }

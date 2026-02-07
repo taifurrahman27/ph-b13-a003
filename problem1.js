@@ -3,11 +3,7 @@ function newPrice(currentPrice, discount) {
         return 'Invalid';
     }
 
-    if (isNaN(currentPrice) || isNaN(discount)) {
-        return 'Invalid';
-    }
-
-    if (discount < 0 || discount > 100) {
+    if ((isNaN(currentPrice) || isNaN(discount))||(discount < 0 || discount > 100) ){
         return 'Invalid';
     }
 
@@ -16,4 +12,5 @@ function newPrice(currentPrice, discount) {
 
     return (newPrice.toFixed(3));
 }
+
 console.log(newPrice(2000, 17.17));
